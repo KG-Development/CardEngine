@@ -1,4 +1,7 @@
 #include "../headers/Deck.h"
+#include "time.h"
+#include <windows.h>
+#include <iostream>
 
 Deck::Deck(int size) : size(size){
 
@@ -7,6 +10,14 @@ Deck::Deck(int size) : size(size){
 
     for(int i = 0; i < size; i++){
         this->deck[i] = new Card();
+    }
+}
+
+void Deck::shuffle(){
+    srand(time(NULL));
+    for(int i = 0; i < this->noe; i++){
+        int randPos = rand() % this->noe;
+        std::swap(this->deck[i], this->deck[randPos]);
     }
 }
 
@@ -22,7 +33,7 @@ void Deck::push(Card *card){
 Card* Deck::pop(){
 
     if(this->isEmpty())
-        return new Card();
+        return nullptr;
 
     this->noe -= 1;
 
@@ -33,13 +44,18 @@ Card* Deck::pop(){
 Card* Deck::peek(){
 
     if(this->isEmpty())
-        return new Card();
+        return nullptr;
 
     Card* returnVal = this->deck[this->noe - 1];
 
     return returnVal;
 }
 
+Card* Deck::getCardByIndex(int index){
+    if(index < 0 || index > this->noe - 1)
+        return nullptr;
+    return this->deck[index];
+}
 
 bool Deck::isFull(){
     return (this->size == this->noe);

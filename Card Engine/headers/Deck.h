@@ -8,9 +8,12 @@ class Deck{
 public:
     Deck(int size = 52);
 
+    void shuffle();
+
     void push(Card *card);
     Card* pop();
     Card* peek();
+    Card* getCardByIndex(int index);
 
     int getSize();
     int getElements();

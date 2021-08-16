@@ -15,7 +15,8 @@ enum CARDTYPE{
     TEN = 10,
     JOLLY = 11,
     QEEN = 12,
-    KING = 13
+    KING = 13,
+    JOKER = 14
 };
 enum CARDSIGN {
     CLUBS = 0, //♣
