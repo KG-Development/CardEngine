@@ -6,7 +6,6 @@ class Card{
 
 public:
     Card(CARDTYPE number = AS, CARDSIGN symbol = SPADES, CARDCOLORS color = BLACK, bool visible = false);
-    Card(const Card &card);
     CARDSIGN getSign();
     CARDTYPE getNumber();
     CARDCOLORS getColor();

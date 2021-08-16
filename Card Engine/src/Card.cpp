@@ -37,7 +37,8 @@ bool Card::equalTo(const Card &card){
 
 void Card::printCard(){
     if(!this->visible){
-
+        std::cout << "[#]";
+        return;
     }
     std::cout << "[";
     myio::setColor(this->color);

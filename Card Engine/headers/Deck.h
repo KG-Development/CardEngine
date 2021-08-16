@@ -8,6 +8,8 @@ class Deck{
 public:
     Deck(int size = 52);
 
+    void shuffle();
+
     void push(Card *card);
     Card* pop();
     Card* peek();
