@@ -19,7 +19,38 @@ int main() {
         window.clear();
         window.display();
     }
+
+
+    Deck deck(56);
+    CARDCOLORS c = (CARDCOLORS) BLACK;
+
+    myio::setColorAndBackground(WHITE, GREEN);
+    for(int j = 0; j < 4; j++){
+
+        if((CARDSIGN) j == HEARTS || (CARDSIGN) j == DIAMONDS){
+            c = (CARDCOLORS) RED;
+        }else{
+            c = (CARDCOLORS) BLACK;
+        }
+
+        for(int i = 0; i < 14; i++){
+            deck.push(new Card((CARDTYPE) i, (CARDSIGN) j, c, true));
+        }
+    }
+
+    for(int i = 0; i < 4; i++){
+        for(int j = 0; j < 14; j++){
+            deck.pop()->printCard();
+        }
+        std::cout << std::endl;
+    }
+
+    deck.shuffle();
+
+    Card *card =  deck.pop();
+    card->printCard();
     */
+
 
     Deck deck(56);
     CARDCOLORS c = (CARDCOLORS) BLACK;

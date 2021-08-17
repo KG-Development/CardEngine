@@ -15,6 +15,7 @@ public:
     void flipCard(int index);
     void flipHand();
 
+
     void show();
 
     bool isFull();
