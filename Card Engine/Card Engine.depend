@@ -1,5 +1,43 @@
 # depslib dependency file v1.0
+
+1629103287 source:c:\users\user\documents\github\cardengine\card engine\src\card.cpp
+	"../headers/Card.h"
+	"../headers/myconio.h"
+	<iostream>
+
+1629105416 c:\users\user\documents\github\cardengine\card engine\headers\card.h
+	"CardDefenition.h"
+
+1629097615 c:\users\user\documents\github\cardengine\card engine\headers\carddefenition.h
+
+1629102710 c:\users\user\documents\github\cardengine\card engine\headers\myconio.h
+
+1629097615 source:c:\users\user\documents\github\cardengine\card engine\src\color.cpp
+
+1629184333 source:c:\users\user\documents\github\cardengine\card engine\src\deck.cpp
+	"../headers/Deck.h"
+	"time.h"
+	<windows.h>
+	<iostream>
+
+1629184126 c:\users\user\documents\github\cardengine\card engine\headers\deck.h
+	"Card.h"
+	"CardDefenition.h"
+
+1629183766 source:c:\users\user\documents\github\cardengine\card engine\src\hand.cpp
+	"../headers/Card.h"
+	"../headers/Hand.h"
+
+1629183714 c:\users\user\documents\github\cardengine\card engine\headers\hand.h
+	"../headers/Card.h"
+
+1629097615 source:c:\users\user\documents\github\cardengine\card engine\src\myconio.cpp
+	<windows.h>
+	<cstdio>
+	"../headers/myconio.h"
+  
 1629105974 source:c:\users\user\documents\github\cardengine\card engine\main.cpp
+
 	<iostream>
 	<SFML/Graphics.hpp>
 	"headers/Card.h"
@@ -452,4 +490,5 @@
 1629106069 source:c:\users\user\documents\github\cardengine\card engine\src\hand.cpp
 	"../headers/Card.h"
 	"../headers/Hand.h"
+
 

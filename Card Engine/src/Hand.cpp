@@ -25,6 +25,22 @@ Card* Hand::getCard(int index){
         return nullptr;
     return this->hand[index];
 }
+
+Card* Hand::playCard(int index){
+    if(index > this->noe - 1 || index < 0)
+        return nullptr;
+
+    Card* returnVal = this->hand[index];
+    returnVal->setVisible(true);
+
+    this->noe -= 1;
+
+    for(int i = index; i < this->noe; i++){
+        this->hand[i] = this->hand[i + 1];
+    }
+
+    return returnVal;
+}
 void Hand::removeCard(int index){
     if(index > this->noe - 1 || index < 0)
         return;
@@ -42,6 +58,12 @@ void Hand::flipCard(int index){
         this->hand[index]->setVisible(false);
     }else{
         this->hand[index]->setVisible(true);
+    }
+}
+void Hand::flipHand(){
+
+    for(int i = 0; i < this->noe; i++){
+        this->hand[i]->setVisible(true);
     }
 }
 

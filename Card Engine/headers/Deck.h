@@ -13,6 +13,7 @@ public:
     void push(Card *card);
     Card* pop();
     Card* peek();
+    Card* getCardByIndex(int index);
 
     int getSize();
     int getElements();

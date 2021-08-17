@@ -79,11 +79,13 @@ char Card::getNumberChar(){
     case TEN:
         return char(number + '0');
     case JOLLY:
-        return 'J';
+        return 'B';
     case QEEN:
         return 'Q';
     case KING:
         return 'K';
+    case JOKER:
+        return 'J'
     }
     return -1;
 }

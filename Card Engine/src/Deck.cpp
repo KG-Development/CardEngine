@@ -33,7 +33,7 @@ void Deck::push(Card *card){
 Card* Deck::pop(){
 
     if(this->isEmpty())
-        return new Card();
+        return nullptr;
 
     this->noe -= 1;
 
@@ -44,13 +44,18 @@ Card* Deck::pop(){
 Card* Deck::peek(){
 
     if(this->isEmpty())
-        return new Card();
+        return nullptr;
 
     Card* returnVal = this->deck[this->noe - 1];
 
     return returnVal;
 }
 
+Card* Deck::getCardByIndex(int index){
+    if(index < 0 || index > this->noe - 1)
+        return nullptr;
+    return this->deck[index];
+}
 
 bool Deck::isFull(){
     return (this->size == this->noe);

@@ -9,8 +9,12 @@ public:
 
     void addCard(Card* card);
     Card* getCard(int index);
+    Card* playCard(int index);
+
     void removeCard(int index);
     void flipCard(int index);
+    void flipHand();
+
 
     void show();
 
