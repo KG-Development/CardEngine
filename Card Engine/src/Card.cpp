@@ -85,7 +85,7 @@ char Card::getNumberChar(){
     case KING:
         return 'K';
     case JOKER:
-        return 'J'
+        return 'J';
     }
     return -1;
 }
